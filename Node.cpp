@@ -12,7 +12,7 @@ void LinkedList()
 {
 	int x, y;
 	// Variable for row count
-	int rowCount = 0;
+	int rowCount = 0; 
 	// Variable for input character
 	char ch2;
 	// Variable for code command string
@@ -27,7 +27,7 @@ void LinkedList()
 	Node* rows[7];
 
 	ifstream inputFile;
-	inputFile.open("c:\\temp\\input.txt");
+	inputFile.open("input.txt");
 	
 	// All rows are null at start of program
 	for (int i = 0; i < 7; i++)
@@ -99,6 +99,15 @@ void LinkedList()
 				current = current->prev;
 				delete(current->next);
 				current->next = Ndel;
+				x--;
+			}
+			else if (current = start)
+			{
+				Node* Ndel = start->next;
+				delete(start);
+				start = Ndel;
+				start->prev = nullptr;
+				current = start;
 				x--;
 			}
 
